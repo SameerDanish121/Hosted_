@@ -355,37 +355,37 @@ class AdminController extends Controller
                         $users = user::where('role_id', 11)->get();
                     } elseif ($broadcast && $sectionId) {
                         // Broadcast to all students in a specific section
-                        $users = User::where('role_id', 11)->where('section_id', $sectionId)->get();
+                        $users = user::where('role_id', 11)->where('section_id', $sectionId)->get();
                     }
                     break;
 
                 case 'teacher':
                     if ($broadcast && !$tlReceiverId) {
                         // Broadcast to all teachers
-                        $users = User::where('role_id', 2)->get();
+                        $users = user::where('role_id', 2)->get();
                     } elseif ($broadcast && $tlReceiverId) {
                         // Send to a specific teacher based on TL_receiver_id
-                        $users = User::where('role_id', 2)->where('id', $tlReceiverId)->get();
+                        $users = user::where('role_id', 2)->where('id', $tlReceiverId)->get();
                     }
                     break;
 
                 case 'datacell':
                     if ($broadcast && !$tlReceiverId) {
                         // Broadcast to all datacell users
-                        $users = User::where('role_id', 3)->get();
+                        $users = user::where('role_id', 3)->get();
                     } elseif ($broadcast && $tlReceiverId) {
                         // Send to a specific datacell user based on TL_receiver_id
-                        $users = User::where('role_id', 3)->where('id', $tlReceiverId)->get();
+                        $users = user::where('role_id', 3)->where('id', $tlReceiverId)->get();
                     }
                     break;
 
                 case 'jlecture':
                     if ($broadcast && !$tlReceiverId) {
                         // Broadcast to all jlecture users
-                        $users = User::where('role_id', 4)->get();
+                        $users = user::where('role_id', 4)->get();
                     } elseif ($broadcast && $tlReceiverId) {
                         // Send to a specific jlecture user based on TL_receiver_id
-                        $users = User::where('role_id', 4)->where('id', $tlReceiverId)->get();
+                        $users = user::where('role_id', 4)->where('id', $tlReceiverId)->get();
                     }
                     break;
 

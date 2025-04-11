@@ -388,7 +388,7 @@ class StudentsController extends Controller
                     "Start Date" => $session->start_date ?? "N/A",
                     "End Date" => $session->end_date ?? "N/A",
                     "image" => $Admin->image ? asset($Admin->image) : null,
-                    "course_count" => course::count(),
+                    "course_count" => Course::count(),
                     "offered_course_count" => offered_courses::where('session_id', (new session())->getCurrentSessionId())->count(),
                     "student_count" => student::count(),
                     "faculty_count" => teacher::count() + juniorlecturer::count(),
