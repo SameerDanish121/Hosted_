@@ -11,8 +11,11 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::table('task', function (Blueprint $table) {
-            $table->foreign(['teacher_offered_course_id'], 'task_ibfk_1')->references(['id'])->on('teacher_offered_courses')->onUpdate('no action')->onDelete('no action');
+        Schema::create('section', function (Blueprint $table) {
+            $table->integer('id', true);
+            $table->string('group', 50);
+            $table->string('semester', 50);
+            $table->string('program', 50);
         });
     }
 
@@ -21,8 +24,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::table('task', function (Blueprint $table) {
-            $table->dropForeign('task_ibfk_1');
-        });
+        Schema::dropIfExists('section');
     }
 };

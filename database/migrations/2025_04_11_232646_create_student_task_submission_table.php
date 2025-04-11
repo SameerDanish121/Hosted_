@@ -13,7 +13,8 @@ return new class extends Migration
     {
         Schema::create('student_task_submission', function (Blueprint $table) {
             $table->string('Answer')->nullable();
-            $table->dateTime('DateTime')->nullable()->useCurrent();
+            $table->timestamp('DateTime')->default(DB::raw('CURRENT_TIMESTAMP'));
+            // $table->dateTime('DateTime')->nullable()->useCurrent();
             $table->integer('Student_id')->index('student_id');
             $table->integer('Task_id')->index('task_id');
         });

@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('contested_attendance', function (Blueprint $table) {
             $table->integer('id', true);
             $table->integer('Attendance_id')->index('attendance_id');
-            $table->enum('Status', ['Accepted', 'Rejected'])->nullable();
+            $table->enum('Status', ['Accepted', 'Rejected', 'Pending'])->nullable()->default('Pending');
             $table->boolean('isResolved')->nullable()->default(false);
         });
     }
