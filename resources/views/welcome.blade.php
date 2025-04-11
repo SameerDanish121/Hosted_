@@ -11,7 +11,7 @@
   <!-- Header Section -->
   <header class="bg-green-800 text-white py-6 shadow-lg">
     <div class="container mx-auto px-6 text-center">
-      <h1 class="text-4xl font-bold">Learning Management System (LMS)</h1>
+      <h1 class="text-4xl font-bold">Learning Management System (LMS) by Mr .Muhammad Ahsan</h1>
       <p class="text-lg text-gray-200 mt-2">A Comprehensive Digital Learning & Academic Management Platform</p>
     </div>
   </header>
