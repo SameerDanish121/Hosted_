@@ -28,7 +28,7 @@ class attendance extends Model
     }
     public function venue()
     {
-        return $this->belongsTo(Venue::class, 'venue_id');
+        return $this->belongsTo(venue::class, 'venue_id');
     }
     public static function getAttendanceBySubject($teacher_offered_course_id = null, $student_id = null)
     {
