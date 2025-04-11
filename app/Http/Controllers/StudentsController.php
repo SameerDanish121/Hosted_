@@ -317,7 +317,7 @@ class StudentsController extends Controller
                 "username" => 'required|string',
                 "password" => 'required'
             ]);
-            $user = User::with('role')
+            $user = user::with('role')
                 ->where('username', $request->username)
                 ->where('password', $request->password)
                 ->firstOrFail();
@@ -593,7 +593,7 @@ class StudentsController extends Controller
                 "username" => 'required|string',
                 "password" => 'required'
             ]);
-            $user = User::with('role')
+            $user = user::with('role')
                 ->where('username', $request->username)
                 ->where('password', $request->password)
                 ->firstOrFail();
