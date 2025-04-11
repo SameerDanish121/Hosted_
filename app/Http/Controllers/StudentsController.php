@@ -40,7 +40,7 @@ use App\Models\student_task_submission;
 use App\Models\task;
 use App\Models\teacher_offered_courses;
 use App\Models\timetable;
-use App\Models\User;
+use App\Models\user;
 use Exception;
 use App\Models;
 use Illuminate\Database\Eloquent\ModelNotFoundException;
